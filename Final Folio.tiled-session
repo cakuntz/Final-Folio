@@ -1,0 +1,71 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Maps/Demo/DemoRoom.tmx",
+    "expandedProjectPaths": [
+        "Maps/Tilesets",
+        "Maps/Demo",
+        ".",
+        "Maps"
+    ],
+    "fileStates": {
+        "Maps/Demo/DemoRoom.tmx": {
+            "scale": 1.8683333333333332,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 217.57359500446034,
+                "y": 131.66815343443358
+            }
+        },
+        "Maps/Tilesets/Bedroom.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Maps/Tilesets/Condo.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Maps/Tilesets/Generic.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Maps/Tilesets/Livingroom.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Maps/Tilesets/Music and Sport.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Maps/Tilesets/Room Builder.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/codyk/Downloads/Modern_Interiors_v41.3.3/1_Interiors/32x32/Theme_Sorter_32x32",
+    "map.height": 15,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 15,
+    "openFiles": [
+        "Maps/Demo/DemoRoom.tmx",
+        "Maps/Tilesets/Generic.tsx",
+        "Maps/Tilesets/Bedroom.tsx",
+        "Maps/Tilesets/Condo.tsx",
+        "Maps/Tilesets/Livingroom.tsx",
+        "Maps/Tilesets/Room Builder.tsx",
+        "Maps/Tilesets/Music and Sport.tsx"
+    ],
+    "project": "Final Folio.tiled-project",
+    "recentFiles": [
+        "Maps/Tilesets/Music and Sport.tsx",
+        "Maps/Tilesets/Room Builder.tsx",
+        "Maps/Tilesets/Livingroom.tsx",
+        "Maps/Tilesets/Condo.tsx",
+        "Maps/Tilesets/Bedroom.tsx",
+        "Maps/Tilesets/Generic.tsx",
+        "Maps/Demo/DemoRoom.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
