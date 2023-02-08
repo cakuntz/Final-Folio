@@ -4,7 +4,7 @@
  <tileset firstgid="8285" source="../Tilesets/Bedroom.tsx"/>
  <tileset firstgid="9997" source="../Tilesets/Livingroom.tsx"/>
  <tileset firstgid="10717" source="../Tilesets/Generic.tsx"/>
- <group id="4" name="Room Base" visible="0">
+ <group id="4" name="Room Base">
   <layer id="1" name="Floor" width="10" height="9">
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
@@ -58,7 +58,7 @@
 </data>
   </layer>
  </group>
- <layer id="5" name="Furniture 0" width="10" height="9" visible="0">
+ <layer id="5" name="Furniture 0" width="10" height="9">
   <data encoding="csv">
 0,0,0,0,10371,10372,9905,9906,9907,0,
 0,9461,0,0,10387,10388,9921,9922,9923,0,
@@ -71,7 +71,7 @@
 0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="6" name="Furniture 1" width="10" height="9" visible="0">
+ <layer id="6" name="Furniture 1" width="10" height="9">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,9464,9215,9216,0,0,0,0,0,0,

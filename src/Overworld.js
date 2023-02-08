@@ -18,7 +18,8 @@ class Overworld {
             // update all objects before the character
             Object.values(this.map.gameObjects).forEach(object => {
                 object.update({
-                    arrow: this.directionInput.direction
+                    arrow: this.directionInput.direction,
+                    map: this.map,
                 })
             })
 
@@ -26,10 +27,9 @@ class Overworld {
             this.map.drawUnderImage(this.ct, cameraPerson);
 
             // draw all objects
-            Object.values(this.map.gameObjects).forEach(object => {
-                object.update({
-                    arrow: this.directionInput.direction
-                })
+            Object.values(this.map.gameObjects).sort((a,b) => {
+                return a.y - b.y;
+            }).forEach(object => {
                 object.sprite.draw(this.ct, cameraPerson);
             })
 
@@ -47,14 +47,19 @@ class Overworld {
     init() {
 
         this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
-
+        this.map.mountObjects();
         this.directionInput = new DirectionInput();
         this.directionInput.init();
-        
 
         this.startGameLoop();
 
-
+        this.map.startCutscene([
+            {type: "textMessage", text: "WAKEUPWAKEUPWAKEUP"}
+            // {who: "MC", type: "walk", direction: "Left"},
+            // {who: "MC", type: "walk", direction: "Left"},
+            // {who: "MC", type: "walk", direction: "Left"},
+            // {who: "npc1", type: "walk", direction: "Left"},
+            // {who: "npc1", type: "stand", direction: "Up", time: 800}
+        ])
     }
-
 }

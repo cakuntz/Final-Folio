@@ -1,45 +1,95 @@
+
 class Person extends GameObject {
     constructor(config){
         super(config);
         this.movingProgressRemaining = 0;
+        this.isStanding = false;
 
         this.isPlayerControlled = config.isPlayerControlled || false;
 
         this.directionUpdate = {
-            "Up": ["y", -1],
-            "Left": ["x", -1],
-            "Down": ["y", 1],
-            "Right": ["x", 1],
+            "Up": ["y", -2],
+            "Left": ["x", -2],
+            "Down": ["y", 2],
+            "Right": ["x", 2],
         }
     }
         
     update(state) {
-        this.updatePosition();
-        this.updateSprite(state);
+        if(this.movingProgressRemaining > 0) {
+            this.updatePosition();
+        } else {
 
-        if (this.isPlayerControlled && this.movingProgressRemaining === 0 && state.arrow){
-            this.direction = state.arrow;
-            this.movingProgressRemaining = 32;
+            // Insert more cases for movement start
+
+            // case: no cutscene AND player can input AND movement key is pressed
+            if (!state.map.isCutscenePlaying && this.isPlayerControlled && state.arrow){
+                this.startBehavior(state, {
+                    type: "walk",
+                    direction: state.arrow
+                })
+            }
+        this.updateSprite(state);
         }
+    }
+
+    startBehavior(state, behavior) {
+
+        // set char direction to passed in behavior
+        this.direction = behavior.direction;
+        if(behavior.type === "walk") {
+
+            // Break loop if space is taken
+            if(state.map.isSpaceTaken(this.x, this.y, this.direction)) {
+
+                // if behavior retry flag is up, start behavior again
+                behavior.retry && setTimeout(() => {
+                    this.startBehavior(state, behavior);
+                }, 10)
+
+                return;
+            }
+
+        // commence walk and reserve movement space via wall
+        state.map.moveWall(this.x, this.y, this.direction);
+        this.movingProgressRemaining = 32;
+        this.updateSprite(state);
+        }
+
+        if(behavior.type === "stand") {
+            this.isStanding = true;
+            setTimeout(() => {
+                utils.emitEvent("PersonStandComplete", {
+                    whoId: this.id
+                })
+                this.isStanding = false;
+            }, behavior.time)
+        }
+
     }
 
     updatePosition() {
-        if(this.movingProgressRemaining > 0) {
-            const [property, change] = this.directionUpdate[this.direction];
-            this[property] += change;
-            this.movingProgressRemaining -= 1;
+        const [property, change] = this.directionUpdate[this.direction];
+        this[property] += change;
+        this.movingProgressRemaining -= 2;
+
+        if (this.movingProgressRemaining === 0) {
+            // walking finished
+            utils.emitEvent("PersonWalkingComplete", {
+                whoId: this.id
+            })
         }
+        
     }
 
-     updateSprite(state) {
-        if (this.isPlayerControlled && this.movingProgressRemaining === 0 && !state.arrow){
-            this.sprite.setAnimation("idle"+this.direction);
-            return;
-        }
+     updateSprite() {
 
         if (this.movingProgressRemaining > 0) {
             this.sprite.setAnimation("walk"+this.direction)
+            return;
         }
+        this.sprite.setAnimation("idle"+this.direction);
+
     }
     
 }
