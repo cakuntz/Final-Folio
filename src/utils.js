@@ -1,4 +1,3 @@
-// this is GOOD
 
 const utils = {
     withGrid(n) {
@@ -27,12 +26,20 @@ const utils = {
         return {x,y};
     },
 
+    oppositeDirection(direction) {
+        if (direction === "Up") { return "Down"};
+        if (direction === "Left") { return "Right"};
+        if (direction === "Down") { return "Up"};
+        return "Left";
+    },
+
     emitEvent(name, detail) {
         const event = new CustomEvent(name, {
             detail
         });
         document.dispatchEvent(event);
     }
+
 
 
 };

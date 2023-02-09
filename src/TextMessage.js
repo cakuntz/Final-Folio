@@ -6,6 +6,7 @@ class TextMessage {
     }
 
     createElement() {
+        // making the div
         this.element = document.createElement("div");
 
         // a standard that the added class matches the class name
@@ -17,11 +18,27 @@ class TextMessage {
             <p class="TextMessage_p">${this.text}</p>
             <button class="TextMessage_button">Next</button>
         `)
+
+        // Listens in the button for a click event
+        this.element.querySelector("button").addEventListener("click", () => {
+            // close text
+            this.done();
+        });
+
+        this.actionListener = new KeypressListener("Enter", () => {
+            this.actionListener.unbind();
+            this.done();
+        })
+    }
+
+    done() {
+        this.element.remove();
+        this.onComplete();
     }
 
     init(container) {
         this.createElement();
-        container.appendChild(this.element)
+        container.appendChild(this.element);
     }
 
 }

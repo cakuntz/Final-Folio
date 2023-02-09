@@ -1,3 +1,4 @@
+//good
 (function () {
 
     const OW = new Overworld({
@@ -5,4 +6,4 @@
     });
     OW.init();
 
-})()
+})();

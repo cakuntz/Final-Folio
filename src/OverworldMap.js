@@ -4,7 +4,6 @@ class OverworldMap {
         this.gameObjects = config.gameObjects;
         this.walls = config.walls || {};
 
-
         // base layer
         this.underImage = new Image();
         this.underImage.src = config.underSrc;
@@ -62,6 +61,17 @@ class OverworldMap {
 
     }
 
+    checkForActionCutscene() {
+        const MC = this.gameObjects["MC"];
+        const nextCoords = utils.nextPosition(MC.x, MC.y, MC.direction);
+        const match = Object.values(this.gameObjects).find(object => {
+            return `${object.x},${object.y}` === `${nextCoords.x},${nextCoords.y}`
+        });
+        if (!this.isCutscenePlaying && match && match.talking.length) {
+            this.startCutscene(match.talking[0].events)
+        }
+    }
+
     addWall(x,y) {
         this.walls[`${x},${y}`] = true;
     }
@@ -98,20 +108,27 @@ window.OverworldMaps = {
                     { type: "stand", direction: "Up", time: 1100},
                     { type: "stand", direction: "Right", time: 500},
                     { type: "stand", direction: "Up", time: 100},
-                ]
+                ],
+                talking: [{
+                    events: [
+                        { type: "textMessage", text: "HOLY S***, IS THAT ME?!?!", faceMC: "npc1"},
+                        { type: "textMessage", text: "ohgodohgodohgodohgodohgodohgod..."},
+                        { who: "MC", type: "walk", direction: "Right"}
+                    ]
+                }]
             }),
-            npc2: new Person({
-                x: utils.withGrid(7),
-                y: utils.withGrid(4),
-                src: "./Characters/MC/MCIdleWalk.png",
-                behaviorLoop: [
-                    { type: "walk", direction: "Left"},
-                    { type: "stand", direction: "Up", time: 800 },
-                    { type: "walk", direction: "Up"},
-                    { type: "walk", direction: "Right"},
-                    { type: "walk", direction: "Down"},
-                ]
-            })
+            // npc2: new Person({
+            //     x: utils.withGrid(7),
+            //     y: utils.withGrid(4),
+            //     src: "./Characters/MC/MCIdleWalk.png",
+            //     behaviorLoop: [
+            //         { type: "walk", direction: "Left"},
+            //         { type: "stand", direction: "Up", time: 800 },
+            //         { type: "walk", direction: "Up"},
+            //         { type: "walk", direction: "Right"},
+            //         { type: "walk", direction: "Down"},
+            //     ]
+            // })
         },
         walls: {
             // these are denoted as dynamic keys
