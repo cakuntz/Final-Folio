@@ -111,8 +111,8 @@ window.OverworldMaps = {
                 ],
                 talking: [{
                     events: [
-                        { type: "textMessage", text: "HOLY S***, IS THAT ME?!?!", faceMC: "npc1"},
-                        { type: "textMessage", text: "ohgodohgodohgodohgodohgodohgod..."},
+                        { type: "textMessage", text: "That's funny, I'm not even looking in a mirror and I see myself...", faceMC: "npc1"},
+                        { type: "textMessage", text: "ohgodohgodohgodohgodohgodohgod"},
                         { who: "MC", type: "walk", direction: "Right"}
                     ]
                 }]
