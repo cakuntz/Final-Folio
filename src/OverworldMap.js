@@ -102,7 +102,7 @@ window.OverworldMaps = {
             npc1: new Person({
                 x: utils.withGrid(3),
                 y: utils.withGrid(4),
-                src: "./Characters/MC/MCIdleWalk.png",
+                src: "./Characters/FliesNPC/FliesIdleWalk.png",
                 behaviorLoop: [
                     { type: "stand", direction: "Left", time: 700},
                     { type: "stand", direction: "Up", time: 1100},

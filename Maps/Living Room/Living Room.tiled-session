@@ -1,5 +1,5 @@
 {
-    "activeFile": "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx",
+    "activeFile": "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Website Map.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -7,10 +7,10 @@
     "fileStates": {
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx": {
             "scale": 2.4699999999999998,
-            "selectedLayer": 4,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 187.44939271255063,
-                "y": 146.5587044534413
+                "x": 160.32388663967615,
+                "y": 163.56275303643727
             }
         },
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Pregen Home/Pregen Home 1.tsx": {
@@ -33,8 +33,37 @@
             "scaleInEditor": 1
         },
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Tilesets/Room Builder.tsx": {
-            "scaleInDock": 0.75,
+            "scaleInDock": 0.33,
             "scaleInEditor": 0.75
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Boy Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Collision.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Element Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Ground Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/House Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Nature Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Tilesets/Water Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Website Map.tmx": {
+            "scale": 0.6174999999999999,
+            "selectedLayer": 50,
+            "viewCenter": {
+                "x": 623.4817813765183,
+                "y": 277.73279352226723
+            }
         },
         "Living Room.tmx": {
             "expandedGroupLayers": [
@@ -43,8 +72,8 @@
             "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 238,
-                "y": 248
+                "x": 224,
+                "y": 223.5
             }
         }
     },
@@ -56,7 +85,8 @@
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Tilesets/Generic.tsx",
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Pregen Home/Pregen Home 1.tsx",
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Pregen Home/Pregen Home 2.tsx",
-        "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx"
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx",
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Website Map.tmx"
     ],
     "project": "Living Room.tiled-project",
     "recentFiles": [
@@ -66,7 +96,8 @@
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Tilesets/Generic.tsx",
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Pregen Home/Pregen Home 1.tsx",
         "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Pregen Home/Pregen Home 2.tsx",
-        "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx"
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Final Folio/Maps/Demo/DemoRoom.tmx",
+        "C:/Users/codyk/OneDrive/Desktop/Projects/Pokemon Clone/Assets/Website Map.tmx"
     ],
     "tileset.lastUsedFormat": "tsx"
 }
